@@ -24,6 +24,8 @@
 #include <glib/gi18n.h>
 
 #define ETC_GOOROOM_TABLET_MODE "/etc/gooroom/.tablet-mode"
+#define DESKTOP_INTERFACE_SCHEMA_NAME "org.gnome.desktop.interface"
+#define DESKTOP_APPLICATION_SCHEMA_NAME "org.gnome.desktop.a11y.applications"
 
 static gboolean init_tablet_mode = FALSE;
 
@@ -75,6 +77,22 @@ launch_tablet_mode_switching_command (gboolean on)
 	g_free (cmdline);
 
 	return ret;
+}
+
+static void
+screen_keyboard_toggled (gboolean on)
+{
+	gchar *cmdline = NULL;
+
+	cmdline = g_strdup_printf ("/usr/bin/gsettings set %s screen-keyboard-enabled %s",
+                               DESKTOP_APPLICATION_SCHEMA_NAME, on ? "true" : "false");
+	g_spawn_command_line_sync (cmdline, NULL, NULL, NULL, NULL);
+	g_free (cmdline);
+
+	cmdline = g_strdup_printf ("/usr/bin/gsettings set %s toolkit-accessibility true",
+                               DESKTOP_INTERFACE_SCHEMA_NAME);
+	g_spawn_command_line_sync (cmdline, NULL, NULL, NULL, NULL);
+	g_free (cmdline);
 }
 
 static gboolean
@@ -137,6 +155,7 @@ restore:
 		show_error_dialog (_("Desktop Mode Restore Failure"), message);
 		g_free (message);
 	}
+	screen_keyboard_toggled (init_tablet_mode);
 
 
 quit:
@@ -168,13 +187,14 @@ desktop_mode_switching_dialog_response_cb (GtkDialog *dialog,
 			g_free (msg);
 			goto quit;
 		}
+		screen_keyboard_toggled (!init_tablet_mode);
 		g_idle_add ((GSourceFunc) logout_idle_cb, NULL);
 		return;
 	}
 
 quit:
 	gtk_main_quit ();
-}  
+}
 
 static gboolean
 desktop_mode_switching_idle (gpointer user_data)

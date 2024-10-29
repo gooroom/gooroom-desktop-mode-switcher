@@ -1,1 +1,2 @@
-src/main.c
+src/gooroom-desktop-mode-switcher.c
+src/gooroom-screen-keyboard-toggler.c

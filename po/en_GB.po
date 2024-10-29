@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-desktop-mode-switcher 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-21 22:50+0900\n"
+"POT-Creation-Date: 2024-10-29 15:04+0900\n"
 "PO-Revision-Date: 2019-01-08 01:53+0900\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
 "Language: en\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/main.c:109
+#: ../src/gooroom-desktop-mode-switcher.c:127
 msgid ""
 "Failed to system logout\n"
 "Please check gooroom-logout or gnome-session-quit program."
@@ -24,11 +24,12 @@ msgstr ""
 "Failed to system logout\n"
 "Please check gooroom-logout or gnome-session-quit program."
 
-#: ../src/main.c:111 ../src/main.c:122
+#: ../src/gooroom-desktop-mode-switcher.c:129
+#: ../src/gooroom-desktop-mode-switcher.c:140
 msgid "System Logout Error"
 msgstr "System Logout Error"
 
-#: ../src/main.c:120
+#: ../src/gooroom-desktop-mode-switcher.c:138
 msgid ""
 "Not found logout command.\n"
 "Install gooroom-logout or gnome-session-bin packages."
@@ -36,7 +37,7 @@ msgstr ""
 "Not found logout command.\n"
 "Install gooroom-logout or gnome-session-bin packages."
 
-#: ../src/main.c:129
+#: ../src/gooroom-desktop-mode-switcher.c:147
 #, c-format
 msgid ""
 "Failed to restore Tablet Mode\n"
@@ -45,7 +46,7 @@ msgstr ""
 "Failed to restore Tablet Mode\n"
 "Please create %s manually."
 
-#: ../src/main.c:133
+#: ../src/gooroom-desktop-mode-switcher.c:151
 #, c-format
 msgid ""
 "Failed to restore Normal(PC) Mode\n"
@@ -54,12 +55,11 @@ msgstr ""
 "Failed to restore Normal(PC) Mode\n"
 "Please delete %s manually."
 
-#: ../src/main.c:137
-#, fuzzy
+#: ../src/gooroom-desktop-mode-switcher.c:155
 msgid "Desktop Mode Restore Failure"
-msgstr "Tablet Mode Restore Failure"
+msgstr "Desktop Mode Restore Failure"
 
-#: ../src/main.c:159
+#: ../src/gooroom-desktop-mode-switcher.c:178
 #, c-format
 msgid ""
 "Failed to switch Normal(PC) Mode.\n"
@@ -68,7 +68,7 @@ msgstr ""
 "Failed to switch Normal(PC) Mode.\n"
 "Please check %s program"
 
-#: ../src/main.c:163
+#: ../src/gooroom-desktop-mode-switcher.c:182
 #, c-format
 msgid ""
 "Failed to switch Tablet Mode.\n"
@@ -77,11 +77,12 @@ msgstr ""
 "Failed to switch Tablet Mode.\n"
 "Please check %s program"
 
-#: ../src/main.c:167 ../src/main.c:205
+#: ../src/gooroom-desktop-mode-switcher.c:186
+#: ../src/gooroom-desktop-mode-switcher.c:225
 msgid "Desktop Mode Switching"
 msgstr ""
 
-#: ../src/main.c:186
+#: ../src/gooroom-desktop-mode-switcher.c:206
 msgid ""
 "To switch to normal mode, you must log in again.\n"
 "Would you like to log in again now?"
@@ -89,7 +90,7 @@ msgstr ""
 "To switch to normal mode, you must log in again.\n"
 "Would you like to log in again now?"
 
-#: ../src/main.c:189
+#: ../src/gooroom-desktop-mode-switcher.c:209
 msgid ""
 "To switch to tablet mode, you must log in again.\n"
 "Would you like to log in again now?"
@@ -97,23 +98,10 @@ msgstr ""
 "To switch to tablet mode, you must log in again.\n"
 "Would you like to log in again now?"
 
-#: ../src/main.c:199
+#: ../src/gooroom-desktop-mode-switcher.c:219
 msgid "Yes"
 msgstr "Yes"
 
-#: ../src/main.c:200
+#: ../src/gooroom-desktop-mode-switcher.c:220
 msgid "No"
 msgstr "No"
-
-#~ msgid "Normal(PC) Mode Restore Failure"
-#~ msgstr "Normal(PC) Mode Restore Failure"
-
-#~ msgid "Switching Normal(PC) Mode"
-#~ msgstr "Switching Normal(PC) Mode"
-
-#~ msgid "Switching Tablet Mode"
-#~ msgstr "Switching Tablet Mode"
-
-#, fuzzy
-#~ msgid "Switching Normal Mode"
-#~ msgstr "Switching Normal(PC) Mode"

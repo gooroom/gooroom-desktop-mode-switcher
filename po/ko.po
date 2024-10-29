@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gooroom-desktop-mode-switcher 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-21 22:50+0900\n"
+"POT-Creation-Date: 2024-10-29 15:04+0900\n"
 "PO-Revision-Date: 2019-01-08 01:53+0900\n"
 "Language-Team: Gooroom <gooroom@gooroom.kr>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: ../src/main.c:109
+#: ../src/gooroom-desktop-mode-switcher.c:127
 msgid ""
 "Failed to system logout\n"
 "Please check gooroom-logout or gnome-session-quit program."
@@ -25,11 +25,12 @@ msgstr ""
 "gooroom-logout 혹은 gnome-session-quit 명령이\n"
 "올바르게 작동하는지 확인하시기 바랍니다."
 
-#: ../src/main.c:111 ../src/main.c:122
+#: ../src/gooroom-desktop-mode-switcher.c:129
+#: ../src/gooroom-desktop-mode-switcher.c:140
 msgid "System Logout Error"
 msgstr "시스템 로그아웃 오류"
 
-#: ../src/main.c:120
+#: ../src/gooroom-desktop-mode-switcher.c:138
 msgid ""
 "Not found logout command.\n"
 "Install gooroom-logout or gnome-session-bin packages."
@@ -37,7 +38,7 @@ msgstr ""
 "시스템 로그아웃 명령을 찾을 수 없습니다.\n"
 "gooroom-logout 혹은 gnome-session-bin 패키지를 설치하십시오."
 
-#: ../src/main.c:129
+#: ../src/gooroom-desktop-mode-switcher.c:147
 #, c-format
 msgid ""
 "Failed to restore Tablet Mode\n"
@@ -46,7 +47,7 @@ msgstr ""
 "데스크톱을 태블릿 모드로 복원하는데 실패하였습니다.\n"
 "%s 파일을 수동으로 생성하십시오."
 
-#: ../src/main.c:133
+#: ../src/gooroom-desktop-mode-switcher.c:151
 #, c-format
 msgid ""
 "Failed to restore Normal(PC) Mode\n"
@@ -55,11 +56,11 @@ msgstr ""
 "데스크톱을 일반(PC) 모드로 복원하는데 실패하였습니다.\n"
 "%s 파일을 수동으로 삭제하십시오."
 
-#: ../src/main.c:137
+#: ../src/gooroom-desktop-mode-switcher.c:155
 msgid "Desktop Mode Restore Failure"
 msgstr "데스트톱 모드 복원 실패"
 
-#: ../src/main.c:159
+#: ../src/gooroom-desktop-mode-switcher.c:178
 #, c-format
 msgid ""
 "Failed to switch Normal(PC) Mode.\n"
@@ -68,7 +69,7 @@ msgstr ""
 "데스크톱을 일반(PC) 모드로 전환하는데 실패하였습니다.\n"
 "%s 명령을 확인하시기 바랍니다."
 
-#: ../src/main.c:163
+#: ../src/gooroom-desktop-mode-switcher.c:182
 #, c-format
 msgid ""
 "Failed to switch Tablet Mode.\n"
@@ -77,11 +78,12 @@ msgstr ""
 "데스크톱을 태블릿 모드로 전환하는데 실패하였습니다.\n"
 "%s 명령어가 실행되는지 확인하시기 바랍니다."
 
-#: ../src/main.c:167 ../src/main.c:205
+#: ../src/gooroom-desktop-mode-switcher.c:186
+#: ../src/gooroom-desktop-mode-switcher.c:225
 msgid "Desktop Mode Switching"
 msgstr "데스크톱 모드 전환"
 
-#: ../src/main.c:186
+#: ../src/gooroom-desktop-mode-switcher.c:206
 msgid ""
 "To switch to normal mode, you must log in again.\n"
 "Would you like to log in again now?"
@@ -89,7 +91,7 @@ msgstr ""
 "데스크톱을 일반(PC) 모드로 전환하려면 다시 로그인해야 합니다.\n"
 "지금 다시 로그인 하시겠습니까?"
 
-#: ../src/main.c:189
+#: ../src/gooroom-desktop-mode-switcher.c:209
 msgid ""
 "To switch to tablet mode, you must log in again.\n"
 "Would you like to log in again now?"
@@ -97,10 +99,10 @@ msgstr ""
 "데스크톱을 태블릿 모드로 전환하려면 다시 로그인해야 합니다.\n"
 "지금 다시 로그인 하시겠습니까?"
 
-#: ../src/main.c:199
+#: ../src/gooroom-desktop-mode-switcher.c:219
 msgid "Yes"
 msgstr "예"
 
-#: ../src/main.c:200
+#: ../src/gooroom-desktop-mode-switcher.c:220
 msgid "No"
 msgstr "아니오"
