@@ -1,3 +1,10 @@
+gooroom-desktop-mode-switcher (1.1.0+grm4u1) unstable; urgency=medium
+
+  [ cjheo ]
+  * [b716cbd3] 태블릿모드 관련 기능추가
+
+ -- Gooroom Autobuilder <jenkins@gooroom.kr>  Tue, 05 Nov 2024 18:00:21 +0900
+
 gooroom-desktop-mode-switcher (1.0.0+grm4u1) unstable; urgency=medium
 
   * Initial Release.
